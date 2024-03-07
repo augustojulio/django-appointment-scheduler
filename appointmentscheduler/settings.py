@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'appointmentscheduler',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -79,7 +80,7 @@ DATABASES = {
         'NAME': 'appointment_scheduler_db',
         'USER': 'appointment_scheduler_user',
         'PASSWORD': '3bx2sEy2h6ev',
-        'HOST': 'db',  # nome do serviço do banco de dados no Docker Compose
+        'HOST': '172.25.0.3',
         'PORT': '5432',
     }
 }
