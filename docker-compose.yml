@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  db:
+    image: postgres
+    environment:
+      POSTGRES_DB: appointment_scheduler_db
+      POSTGRES_USER: appointment_scheduler_user
+      POSTGRES_PASSWORD: 3bx2sEy2h6ev
+  web:
+    build: .
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    environment:
+      - DATABASE_URL=postgres://appointment_scheduler_user:3bx2sEy2h6ev@db:5432/appointment_scheduler_db

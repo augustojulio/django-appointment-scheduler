@@ -75,8 +75,12 @@ WSGI_APPLICATION = 'appointmentscheduler.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'appointment_scheduler_db',
+        'USER': 'appointment_scheduler_user',
+        'PASSWORD': '3bx2sEy2h6ev',
+        'HOST': 'db',  # nome do serviço do banco de dados no Docker Compose
+        'PORT': '5432',
     }
 }
 
