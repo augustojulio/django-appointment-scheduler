@@ -80,7 +80,7 @@ DATABASES = {
         'NAME': 'appointment_scheduler_db',
         'USER': 'appointment_scheduler_user',
         'PASSWORD': '3bx2sEy2h6ev',
-        'HOST': '172.25.0.3',
+        'HOST': '172.18.0.2',
         'PORT': '5432',
     }
 }
@@ -126,3 +126,5 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+LOGIN_REDIRECT_URL = "/"
